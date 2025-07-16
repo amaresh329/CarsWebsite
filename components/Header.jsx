@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { Button } from './ui/button';
+import { CarFront } from 'lucide-react';
 
 const Header = async({isAdminPage=false}) => {
   const isAdmin=false;
@@ -21,6 +23,15 @@ const Header = async({isAdminPage=false}) => {
             )
           }
         </Link>
+        <div>
+        <Link href='/saved-cars'>
+          <Button>
+            <CarFront size={18}/>
+              <span className='hidden md-inline'>Saved cars</span>
+            
+          </Button>
+        </Link>
+        </div>
       </nav>
     </header>
   )
